@@ -1,54 +1,59 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
 
-document.addEventListener = ( 'DOMContentLoaded', function() {
-const form = 
-document.getElementById(id="registration-form");
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
 
-const feedbackDiv = document.getElementById("id-form-feedback")
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
 
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Adjust width to account for padding and border */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
 
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
 
-    const username = document.getElementById('username').value.trim();
+button:hover {
+    background-color: #0056b3;
+}
 
-    let isValid = true;
-    const messages = [];
-
-    if (username.lenght < 3){
-        isValid = false;
-        messages.push("Username must not be less than 3 characters.");
-    }
-
-
-    const email = document.getElementById('email').value.trim();
-    
-    let isValid = true;
-    const messages = [];
-
-    if (!email incudes ('@') || !email includes ('.')){
-        isValid = false;
-        messages.push("Please enter a valid email address");
-    }
-
-
-    const passwordInput = document.getElementById('passwordInput').value.trim();
-
-    let isValid = true;
-    const messages = []
-
-    if (passwordInput length < 8);{
-    isValid = false;
-    messages.push("Enetr a valid password")
-    }
-
-
-    feedbackDiv.style.display = 'Block';
-    if (isValid) = {
-        feedbackDiv.textContent = 'Registration Successful!';
-        feedbackDiv.style.color = '#28a745';
-    } else {
-        feedbackDiv.textContent = 'Please fix all errors before submitting';
-        feedbackDiv.style.color = '#dc3545';
-    }
-      });
-});
+#form-feedback {
+    margin-top: 10px;
+    padding: 10px;
+    color: #d8000c;
+    background-color: #ffbaba;
+    border-radius: 4px;
+    display: none; /* Initially hide the feedback div */
+}
