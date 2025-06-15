@@ -26,7 +26,7 @@ form.addEventListener('submit', function (event) {
     let isValid = true;
     const messages = [];
 
-    if (!email incudes ('@') || !email includes ('.') || email.length > 8){
+    if (!email incudes ('@') || !email includes ('.')){
         isValid = false;
         messages.push("Please enter a valid email address");
     }
@@ -37,7 +37,7 @@ form.addEventListener('submit', function (event) {
     let isValid = true;
     const messages = []
 
-    if (passwordInput length < 8);{
+    if (password.length < 8);{
     isValid = false;
     messages.push("Enetr a valid password")
     }
