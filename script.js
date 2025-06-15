@@ -26,7 +26,7 @@ form.addEventListener('submit', function (event) {
     let isValid = true;
     const messages = [];
 
-    if (!email incudes ('@') || !email includes ('.')){
+    if (!email incudes ('@') || !email includes ('.') || email.length > 8){
         isValid = false;
         messages.push("Please enter a valid email address");
     }
