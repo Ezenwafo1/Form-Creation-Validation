@@ -41,15 +41,14 @@ form.addEventListener('submit', function (event) {
     isValid = false;
     messages.push("Enetr a valid password")
     }
+  feedbackDiv.style.display = 'block';
 
-
-    feedbackDiv.style.display = 'Block';
-    if (isValid) = {
-        feedbackDiv.textContent = ("Registration Successful");
-        feedbackDiv.style.color = '#28a745';
+    if (isValid) {
+      feedbackDiv.textContent = "Registration successful";
+      feedbackDiv.style.color = "#28a745";
     } else {
-        feedbackDiv.InnerHTML = messages.join ('<br>');
-        feedbackDiv.style.color = '#dc3545';
+      feedbackDiv.innerHTML = messages.join('<br>');
+      feedbackDiv.style.color = "#dc3545";
     }
       });
 });
