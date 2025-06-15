@@ -48,7 +48,7 @@ form.addEventListener('submit', function (event) {
         feedbackDiv.textContent = 'Registration Successful!';
         feedbackDiv.style.color = '#28a745';
     } else {
-        feedbackDiv.textContent = 'Please fix all errors before submitting';
+        feedbackDiv.InnerHTML = messages.join ('<br>');
         feedbackDiv.style.color = '#dc3545';
     }
       });
