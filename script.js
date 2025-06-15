@@ -15,7 +15,7 @@ form.addEventListener('submit', function (event) {
     let isValid = true;
     const messages = [];
 
-    if (username.lenght < 3){
+    if (username.length < 3){
         isValid = false;
         messages.push("Username must not be less than 3 characters.");
     }
