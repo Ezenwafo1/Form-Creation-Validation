@@ -45,7 +45,7 @@ form.addEventListener('submit', function (event) {
 
     feedbackDiv.style.display = 'Block';
     if (isValid) = {
-        feedbackDiv.textContent = 'Registration Successful!';
+        feedbackDiv.textContent = ("Registration Successful");
         feedbackDiv.style.color = '#28a745';
     } else {
         feedbackDiv.InnerHTML = messages.join ('<br>');
